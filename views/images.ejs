@@ -1,26 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../css/main.css">
-</head>
-<body>
-    <main>
-    <% 
-    <!-- console.log(photoid) -->
+<%- include('partials/galleryHeader') %>
+
+<% 
     for (story of images)  { 
         if (story.id == photoid){ %>
-        <figure><img src="../images/lrg/<%= story.fileName %>" alt="<%= story.title %>">
-            <figcaption><h1><%= story.attribution.credit %></h1>
-            </figcaption></figure>
-    <% }
+<figure class="large-figure"><img src="../images/lrg/<%= story.fileName %>" alt="<%= story.title %>" class="large">
+  <figcaption class="large-caption"><a href="<%= story.attribution.url %>"
+      class="author-link"><%= story.attribution.credit %></a>
+    <P><%= story.attribution.source %></P>
+  </figcaption>
+</figure>
+<% }
         }
-    
-    %>  
- </main>
-</body>
-</html>
+    %>
 
-
+<%- include('partials/footer') %>

@@ -1,22 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/main.css">
-</head>
-<body>
-    <main>
-    <% 
-   
-    for (story of images)  { %>
-        <figure><img src="images/sm/<%= story.fileName %>" alt="<%= story.title %>">
-            <figcaption><h1><%= story.attribution.credit %></h1>
-            </figcaption></figure>
-    <% } %>  
- </main>
-</body>
-</html>
+<%- include('partials/header') %>
 
+<div class="container">
 
+  <p class="p1">Hi there, welcome to my <a href="/pics" class="main-a">Gallery</a></p>
+
+  <%- include('partials/footer') %>

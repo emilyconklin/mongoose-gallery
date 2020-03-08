@@ -1,0 +1,16 @@
+<%- include('partials/header') %>
+
+<% 
+   
+    for (story of images)  { %>
+<figure>
+  <a href="images/<%= story.id %>">
+    <img src="images/sm/<%= story.fileName %>" alt="<%= story.title %>"></a>
+  <figcaption>
+    <h1><%= story.attribution.credit %></h1>
+  </figcaption>
+</figure>
+
+<% } %>
+
+<%- include('partials/footer') %>
