@@ -15,6 +15,7 @@ app.get('/pics', function (req, res) {
   res.render('pics', {});
 });
 
+// Akash helped me with this part
 
 app.get('/images/:id', function (req, res) {
   app.locals.photoid = req.params.id;
