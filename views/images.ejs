@@ -1,16 +1,11 @@
 <%- include('partials/galleryHeader') %>
 
-<% 
-    for (story of images)  { 
-        if (story.id == photoid){ %>
-<figure class="large-figure"><img src="../images/lrg/<%= story.fileName %>" alt="<%= story.title %>" class="large">
-  <figcaption class="large-caption"><a href="<%= story.attribution.url %>"
-      class="author-link"><%= story.attribution.credit %></a>
-    <P><%= story.attribution.source %></P>
+<% console.log(images) %>
+<figure class="large-figure"><img src="../images/lrg/<%= images.fileName %>" alt="<%= images.title %>" class="large">
+  <figcaption class="large-caption"><a href="<%= images.attribution.url %>"
+      class="author-link"><%= images.attribution.credit %></a>
+    <P><%= images.attribution.source %></P>
   </figcaption>
 </figure>
-<% }
-        }
-    %>
 
 <%- include('partials/footer') %>
